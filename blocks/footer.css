@@ -5,6 +5,7 @@
 
 .footer__copyright {
     opacity: .7;
+    display: ruby-text;
 }
 
 @media screen and (max-width: 627px) {
