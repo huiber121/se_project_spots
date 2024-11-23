@@ -1,14 +1,14 @@
-.footer{
+.footer {
     text-align: center;
     padding: 60px 667px 60px 668px;
 }
 
-.footer__copyright{
+.footer__copyright {
     opacity: .7;
 }
 
 @media screen and (max-width: 627px) {
-    .footer{
+    .footer {
         text-align: center;
         padding: 60px 108px 60px 108px;
     }
