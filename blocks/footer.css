@@ -1,16 +1,18 @@
 .footer {
+    padding: 60px 0 60px 0;
     text-align: center;
-    padding: 60px 667px 60px 668px;
 }
 
 .footer__copyright {
-    opacity: .7;
-    display: ruby-text;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgba(33, 33, 33, 0.7);
 }
 
 @media screen and (max-width: 627px) {
     .footer {
         text-align: center;
-        padding: 60px 108px 60px 108px;
     }
 }

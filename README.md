@@ -33,5 +33,5 @@ This project was implemented with html and css and it is adpated for mobile view
 ## Deployment
 
 This website is deployed to the github
-Github Link: 
-
+Github Link: https://[huiber121.github.io/](https://github.com/huiber121/se_project_spots)
+Video Intro: https://drive.google.com/file/d/1uAl5dhT46CKzRXs5-rJYs9uIFukChT70/view?usp=sharing
