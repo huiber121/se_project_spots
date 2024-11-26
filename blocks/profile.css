@@ -57,6 +57,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
+    align-items: center;
 }
 
 .profile__edit-btn:hover {
@@ -81,7 +82,7 @@
     margin-bottom: 0;
     font-size: 16px;
     line-height: 16px;
-    padding: 18px 24px 18px 32px;
+    padding: 18px 23px 18px 31px;
 }
 
 .profile__add-btn:hover {
@@ -110,7 +111,7 @@
 
     .profile__add-btn {
         margin: 0;
-        width: 100%;
+        width: 288px;
         justify-content: center
     }
 
