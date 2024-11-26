@@ -4,7 +4,6 @@
 
 .card__content {
     width: 100%;
-    height: 20px;
     margin: 12px 0 0 0;
     display: flex;
     align-items: center;
@@ -35,6 +34,7 @@
 }
 
 .card__title {
+    max-width: 353px;
     margin: 0;
     font-size: 20px;
     font-weight: 500;
@@ -51,11 +51,8 @@
     }
 
     .card__title {
+        max-width: 95px;
         font-size: 16px;
-    }
-
-    .card__content {
-        width: 100%;
-        height: 18px;
+        line-height: 16px;
     }
 }
