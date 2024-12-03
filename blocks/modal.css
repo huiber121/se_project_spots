@@ -109,30 +109,30 @@
 }
 
 @media screen and (max-width: 627px) {
-    .modal{
+    .modal {
         padding: 0 10px;
     }
 
-    .modal__container{
+    .modal__container {
         padding: 12px;
     }
 
-    .modal__title{
+    .modal__title {
         font-size: 20px;
         line-height: 20px;
         margin: 10px 0 34px;
     }
 
-    .modal__close-btn{
-        top:12px;
-        right:12px;
+    .modal__close-btn {
+        top: 12px;
+        right: 12px;
     }
 
-    .modal__label{
+    .modal__label {
         margin-bottom: 24px;
     }
 
-    .modal__submit-btn{
+    .modal__submit-btn {
         width: 100%;
     }
 }
