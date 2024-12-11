@@ -26,10 +26,38 @@ const initialCards = [
 ];
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
+const profileName = document.querySelector(".profile__name");
+const profileDescription = document.querySelector(".profile__description");
+
 const editModal = document.querySelector("#edit-modal"); //use id instead of class
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
+const editFormElement = editModal.querySelector(".modal__form");
+const editModalNameInput = editModal.querySelector("#profile-name-input");
+const editModalDescriptionInput = editModal.querySelector(
+  "#profile-description-input"
+);
+
+//adding cards
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+  //copy the general content of the template
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+
+  const cardNameEl = cardElement.querySelector(".card__title");
+  const cardImage = cardElement.querySelector(".card__image");
+  cardNameEl.textContent = data.name;
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  return cardElement;
+}
 
 function openModal() {
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
   editModal.classList.add("modal__opened");
 }
 
@@ -37,5 +65,29 @@ function closeModal() {
   editModal.classList.remove("modal__opened");
 }
 
+// The form submission handler. Note that its name
+// starts with a verb and concisely describes what it does.
+function handleProfileFormSubmit(evt) {
+  // Prevent default browser behavior, see explanation below.
+  evt.preventDefault();
+
+  // TODO: Get the values of each form field from the value property
+  // of the corresponding input element.
+  // TODO: Then insert these new values into the textContent property of the
+  // corresponding profile elements.
+  profileName.textContent = editModalNameInput.value;
+  profileDescription.textContent = editModalDescriptionInput.value;
+
+  // TODO: Close the modal.
+  closeModal();
+}
+
 profileEditButton.addEventListener("click", openModal);
 editModalCloseBtn.addEventListener("click", closeModal);
+// Connect the handler to the form, so it will watch for the submit event.
+editFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+for (let i = 0 ; i < initialCards.length; i++) {
+  const cardElement = getCardElement(initialCards[i]);
+  cardsList.prepend(cardElement);
+}
