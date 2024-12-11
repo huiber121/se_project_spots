@@ -87,7 +87,7 @@ editModalCloseBtn.addEventListener("click", closeModal);
 // Connect the handler to the form, so it will watch for the submit event.
 editFormElement.addEventListener("submit", handleProfileFormSubmit);
 
-for (let i = 0 ; i < initialCards.length; i++) {
+for (let i = 0; i < initialCards.length; i++) {
   const cardElement = getCardElement(initialCards[i]);
   cardsList.prepend(cardElement);
 }
