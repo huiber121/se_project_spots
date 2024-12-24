@@ -139,20 +139,20 @@ function handleAddCardSubmit(evt) {
   };
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
-  cardLinkInput.value = "";
-  cardCaptionInput.value = "";
+  evt.target.reset();
   closeModal(cardModal);
 }
 
 // open/close with edit profile button
 profileEditButton.addEventListener("click", () => {
-  if (profileName.textContent && profileDescription.textContent) {
+  if (profileName.textContent && profileDescription.textContent){
     editModalNameInput.value = "Bessie Coleman";
     editModalDescriptionInput.value = "Civil Aviator";
-  } else {
+  }
+  else {
     editModalNameInput.value = profileName.textContent;
     editModalDescriptionInput.value = profileDescription.textContent;
-  }
+  };
   openModal(editModal);
 });
 

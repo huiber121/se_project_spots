@@ -84,7 +84,7 @@
     opacity: 1;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
     margin: 0;
     background-image: url(../images/previewClose.svg);
     opacity: 1;
