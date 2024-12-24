@@ -165,6 +165,11 @@
         margin: 10px 0 34px;
     }
 
+    .modal__caption {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
     .modal__close-btn {
         top: 12px;
         right: 12px;
@@ -173,6 +178,11 @@
     .modal__close_type_preview {
         top: -47px;
         right: 0;
+    }
+
+    .modal__image {
+
+        max-width: 280px;
     }
 
     .modal__label {
