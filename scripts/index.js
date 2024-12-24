@@ -26,7 +26,7 @@ const initialCards = [
   {
     name: "Golden gate bridge",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
-  }
+  },
 ];
 
 //store profile css features from html elments to variables
@@ -78,14 +78,14 @@ function getCardElement(data) {
 
   cardDeleteBtn.addEventListener("click", handleRemoveCard);
 
-  cardImage.addEventListener("click", ()=>{
+  cardImage.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
     previewModalImageEl.alt = data.name;
     previewCaptionEl.textContent = data.name;
   });
 
-  cardLikeBtn.addEventListener("click", ()=>{
+  cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-btn_liked");
   });
 
@@ -128,7 +128,7 @@ function handleRemoveCard(evt) {
   const card = evt.target.closest(".card");
   if (card) {
     card.remove();
-  };
+  }
 }
 
 function handleAddCardSubmit(evt) {
@@ -139,7 +139,7 @@ function handleAddCardSubmit(evt) {
   };
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
-  
+
   closeModal(cardModal);
 }
 
@@ -166,9 +166,9 @@ cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
 });
 
-previewCloseBtn.addEventListener("click", ()=>{
+previewCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
-})
+});
 //for (let i = 0; i < initialCards.length; i++) {
 //  const cardElement = getCardElement(initialCards[i]);
 //  cardsList.prepend(cardElement);
