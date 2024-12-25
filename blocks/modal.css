@@ -36,6 +36,7 @@
 }
 
 .modal__content_type_preview {
+    display: grid;
     padding: 0%;
     background-color: transparent;
     max-width: fit-content;
@@ -85,11 +86,11 @@
 }
 
 .modal__close-btn_type_preview {
-    margin: 0;
+    margin: 0 0 0 12.57px;
     background-image: url(../images/previewClose.svg);
     opacity: 1;
     top: 0px;
-    right: -51.57px;
+    right: -52.57px;
 }
 
 .modal__title {
@@ -175,14 +176,14 @@
         right: 12px;
     }
 
-    .modal__close_type_preview {
-        top: -47px;
+    .modal__close-btn_type_preview {
+        margin: 0 0 8px 0;
+        top: -47.9px;
         right: 0;
     }
 
     .modal__image {
-
-        max-width: 280px;
+        max-width: 288px;
     }
 
     .modal__label {
