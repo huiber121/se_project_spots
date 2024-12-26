@@ -59,6 +59,9 @@
     color: #fff;
     border-radius: 8px;
     max-width: fit-content;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
@@ -174,6 +177,7 @@
     .modal__caption {
         font-size: 16px;
         line-height: 19.2px;
+        max-width: 94px;
     }
 
     .modal__close-btn {
