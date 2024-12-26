@@ -86,11 +86,16 @@
 }
 
 .modal__close-btn_type_preview {
+    transition: opacity 0.5s;
     margin: 0 0 0 12.57px;
     background-image: url(../images/previewClose.svg);
     opacity: 1;
     top: 0px;
     right: -52.57px;
+}
+
+.modal__close-btn_type_preview:hover {
+    opacity: 0.4
 }
 
 .modal__title {
