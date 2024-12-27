@@ -180,6 +180,10 @@
         max-width: 94px;
     }
 
+    .modal__content {
+        padding: 36px 16px;
+    }
+
     .modal__close-btn {
         top: 12px;
         right: 12px;
