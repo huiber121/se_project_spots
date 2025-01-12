@@ -71,6 +71,7 @@
     overflow: hidden;
 }
 
+
 @media screen and (max-width: 627px) {
     .card__image {
         height: 288px;
