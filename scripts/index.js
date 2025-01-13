@@ -175,7 +175,7 @@ function handleAddCardSubmit(evt) {
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
   evt.target.reset();
-  enableValidation();
+  enableValidation(settings);
   closeModal(cardModal);
 }
 
