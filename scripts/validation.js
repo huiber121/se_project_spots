@@ -45,10 +45,15 @@ const toggleButtonState = (inputList, buttonElement, config) => {
     buttonElement.classList.add(config.inactiveButtonClass);
     buttonElement.disabled = true;
   } else {
-    buttonElement.classList.remove(config.inactiveButtonClass);
-    buttonElement.disabled = false;
+    disableButton(buttonElement, config);
   }
 };
+
+const disableButton = (buttonElement, config) => {
+    buttonElement.classList.remove(config.inactiveButtonClass);
+    buttonElement.disabled = false;
+};
+
 
 const setEventListener = (formElement, config) => {
   const inputList = Array.from(

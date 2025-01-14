@@ -159,8 +159,7 @@ function handleAddCardSubmit(evt) {
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
   evt.target.reset();
-  cardModalSubmitBtn.disabled = true;
-  cardModalSubmitBtn.classList.add(settings.inactiveButtonClass);
+  disableButton(cardModalSubmitBtn, settings);
   closeModal(cardModal);
 }
 
