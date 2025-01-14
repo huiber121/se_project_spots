@@ -4,18 +4,17 @@ const settings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_inactive",
   inputErrorClass: "modal__input_state_error",
-  contentErrorClass: "modal__content_error_active",
-  titleErrorClass: "modal__title_error_active",
+  errorClass: "modal__error"
 };
 
 const showInputError = (formElement, inputElement, errorMessage, config) => {
-  const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
+  const errorElement = formElement.querySelector(config.errorClass.id);
   inputElement.classList.add(config.inputErrorClass);
   errorElement.textContent = errorMessage;
 };
 
 const hideInputError = (formElement, inputElement, config) => {
-  const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
+  const errorElement = formElement.querySelector(config.errorClass.id);
   errorElement.textContent = "";
   inputElement.classList.remove(config.inputErrorClass);
 };
@@ -49,20 +48,6 @@ const toggleButtonState = (inputList, buttonElement, config) => {
   }
 };
 
-const toggleModalErrorState = (inputList, config) => {
-  if (hasInvalidInput(inputList)) {
-    editModalContent.classList.add(config.contentErrorClass);
-    editModalTitle.classList.add(config.titleErrorClass);
-    cardModalContent.classList.add(config.contentErrorClass);
-    cardModalTitle.classList.add(config.titleErrorClass);
-  } else {
-    editModalContent.classList.remove(config.contentErrorClass);
-    editModalTitle.classList.remove(config.titleErrorClass);
-    cardModalContent.classList.remove(config.contentErrorClass);
-    cardModalTitle.classList.remove(config.titleErrorClass);
-  }
-};
-
 const setEventListener = (formElement, config) => {
   const inputList = Array.from(
     formElement.querySelectorAll(config.inputSelector)
@@ -75,7 +60,6 @@ const setEventListener = (formElement, config) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement, config);
       toggleButtonState(inputList, buttonElement, config);
-      toggleModalErrorState(inputList, config);
     });
   });
 };
