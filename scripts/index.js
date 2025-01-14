@@ -37,8 +37,6 @@ const profileCardModalBtn = document.querySelector(".profile__add-btn");
 
 //store card css features from html elments to variables
 const cardModal = document.querySelector("#add-card-modal");
-const cardModalContent = cardModal.querySelector(".modal__content");
-const cardModalTitle = cardModal.querySelector(".modal__title");
 const cardForm = document.forms["card-form"];
 const cardModalSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
@@ -53,8 +51,6 @@ const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
 
 //modal edit profile
 const editModal = document.querySelector("#edit-modal"); //use id instead of class
-const editModalContent = editModal.querySelector(".modal__content");
-const editModalTitle = editModal.querySelector(".modal__title");
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
 const editForm = document.forms["profile-form"];
 const editModalNameInput = editModal.querySelector("#profile-name-input");
@@ -169,8 +165,10 @@ function handleAddCardSubmit(evt) {
 
 // open/close with edit profile button
 profileEditButton.addEventListener("click", () => {
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
   resetValidation(
-    editFormElement,
+    editForm,
     [editModalNameInput, editModalDescriptionInput],
     settings
   );
