@@ -160,6 +160,7 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardEl);
   evt.target.reset();
   cardModalSubmitBtn.disabled = true;
+  cardModalSubmitBtn.classList.add(settings.inactiveButtonClass);
   closeModal(cardModal);
 }
 
