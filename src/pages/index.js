@@ -1,31 +1,45 @@
+import { enableValidation, settings, resetValidation } from "../scripts/validation.js";
+import "./index.css";
+import avatar from "../images/avatar.jpg";
+import pencile from "../images/pencile.svg";
+import plus from "../images/plus.svg";
+import close from "../images/close.svg";
+import image1 from "../images/1-photo-by-moritz-feldmann-from-pexels.jpg";
+import image2 from "../images/2-photo-by-ceiline-from-pexels.jpg";
+import image3 from "../images/3-photo-by-tubanur-dogan-from-pexels.jpg";
+import image4 from "../images/4-photo-by-maurice-laschet-from-pexels.jpg";
+import image5 from "../images/5-photo-by-van-anh-nguyen-from-pexels.jpg";
+import image6 from "../images/6-photo-by-moritz-feldmann-from-pexels.jpg";
+import image7 from "../images/7-photo-by-griffin-wooldridge-from-pexels.jpg";
+
 const initialCards = [
   {
     name: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: image1,
   },
   {
     name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
+    link: image2,
   },
   {
     name: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
+    link: image3,
   },
   {
     name: "A very long bridge, over the forest and through the trees",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
+    link: image4,
   },
   {
     name: "Tunnel with morning light",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+    link: image5,
   },
   {
     name: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: image6,
   },
   {
     name: "Golden gate bridge",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+    link: image7,
   },
 ];
 
@@ -45,18 +59,34 @@ const cardCaptionInput = cardModal.querySelector("#add-card-caption-input");
 
 //select to preview modal
 const previewModal = document.querySelector("#preview-modal");
-const previewModalImageEl = previewModal.querySelector(".modal__image");
+const previewModalImageEl = previewModal.querySelector("#modal-image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
 const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
 
 //modal edit profile
 const editModal = document.querySelector("#edit-modal"); //use id instead of class
-const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
+const editModalCloseBtn = editModal.querySelector("#close-image");
+editModalCloseBtn.src = close;
 const editForm = document.forms["profile-form"];
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
 );
+
+const profile = document.querySelector(".profile");
+const profileCol = profile.querySelector(".profile__column");
+
+const avatarImage = profile.querySelector("#avatar-image");
+avatarImage.src = avatar;
+
+const pencileImage = profileCol.querySelector("#pencile-image");
+pencileImage.src = pencile;
+
+const plusImage = profile.querySelector("#plus-image");
+plusImage.src = plus;
+
+const closeImage = cardModalCloseBtn.querySelector("#close-image");
+closeImage.src = close;
 
 const modals = document.querySelectorAll(".modal");
 modals.forEach((modal) => {
@@ -78,7 +108,7 @@ function getCardElement(data) {
     .cloneNode(true);
 
   const cardNameEl = cardElement.querySelector(".card__title");
-  const cardImage = cardElement.querySelector(".card__image");
+  const cardImage = cardElement.querySelector("#card-image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
 
@@ -195,3 +225,6 @@ cardModalCloseBtn.addEventListener("click", () => {
 previewCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
+
+
+enableValidation(settings);
