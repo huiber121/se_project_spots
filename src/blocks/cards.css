@@ -10,7 +10,7 @@
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, 413px);
-    justify-content: center;
+    justify-content: flex-start;
     gap: 40px 20px;
 }
 
