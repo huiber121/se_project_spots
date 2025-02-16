@@ -39,14 +39,12 @@
     font-size: 16px;
     line-height: 16px;
     cursor: pointer;
-    visibility: hidden;
     border: none;
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
     /*transition to 1 from 0*/
     opacity: 1;
-    visibility: visible;
 }
 
 .profile__avatar-btn::after {
