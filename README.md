@@ -8,7 +8,7 @@
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This project is made so all the elements are displayed correctly on popular screen sizes. 
   
 **Figma**  
   
@@ -28,9 +28,10 @@ An image sharing site
 
 ## Description
 
-This is a website to post and edit your post and images. Feel free to like if you are interested in any images.
+This is a website to upload and edit your avatar and post, view and delete your images. Also feel free hit the like button if you are interested in any images.
 
-This project was implemented with html and css and it is adpated for mobile view.
+## Technologies
+This project is setup with webpack configuration and implemented with Javascript, HTML and CSS and it is adpated for mobile view. All functionalities from this web application is commumicate with backend using REST API.
 
 ## Deployment
 

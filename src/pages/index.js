@@ -303,6 +303,8 @@ editForm.addEventListener("submit", handleProfileFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 avatarForm.addEventListener("submit", handleAvatarSubmit);
 //use "click" responses to button type "button" to cancel the delete
+//note: do not set preventDefault() to the click event otherwsie
+//it will override the form submission
 deleteForm.addEventListener("click", handleDeleteCancel);
 deleteForm.addEventListener("submit", handleDeleteSubmit);
 
