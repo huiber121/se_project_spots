@@ -166,7 +166,6 @@
     margin-bottom: 32px;
     color: rgba(33, 33, 33, 0.7);
     font-size: 16px;
-    font-weight: 500;
     line-height: 17.6px;
 }
 
@@ -275,6 +274,11 @@
         text-align: center;
     }
 
+    .modal__title_avatar {
+        margin: 0 0 12px 0;
+        padding: 8px 0;
+    }
+
     .modal__caption {
         font-size: 16px;
         line-height: 19.2px;
@@ -286,13 +290,17 @@
     }
 
 
-    .modal__content_delete{
+    .modal__content_delete {
         padding: 12px;
     }
 
     .modal__content_type_preview {
         padding: 0%;
         max-width: 288px;
+    }
+
+    .modal__content_avatar {
+        padding: 12px;
     }
 
     .modal__close-btn {
@@ -307,10 +315,17 @@
         right: 0px;
     }
 
-    .modal__close-btn_type_delete{
+    .modal__close-btn_type_delete {
         right: 0;
         margin: 0 0 16px 0;
         top: -56.2px;
+    }
+
+    .modal__close-btn_type_avatar {
+        position: relative;
+        margin: 12px 12px 0 0;
+        top: -12.7px;
+        right: -7.1px
     }
 
     .modal__image {
@@ -319,6 +334,10 @@
 
     .modal__label {
         margin-bottom: 24px;
+    }
+
+    .modal__label_avatar {
+        margin-bottom: 12px;
     }
 
     .modal__submit-btn {
@@ -335,8 +354,8 @@
         line-height: 16px;
     }
 
-    .modal__form_delete{
-        gap:12px;
+    .modal__form_delete {
+        gap: 12px;
         flex-direction: column;
         width: 156px;
     }
