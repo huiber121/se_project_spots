@@ -8,11 +8,13 @@
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This project is made so all the elements are displayed correctly on popular screen sizes. 
   
 **Figma**  
   
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+* [Link to the project on Figma part 1](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+
+* [Link to the project on Figma part 2](https://www.figma.com/design/mXGZ6wZ4QPKx5KjpHX9QCV/Sprint-9-Project%3A-Spots?node-id=2601-356&t=QGuJF5mlnIc90ITc-0)
   
 **Images**  
   
@@ -26,9 +28,10 @@ An image sharing site
 
 ## Description
 
-This is a website to post and edit your post and images. Feel free to like if you are interested in any images.
+This is a website to upload and edit your avatar and post, view and delete your images. Also feel free hit the like button if you are interested in any images.
 
-This project was implemented with html and css and it is adpated for mobile view.
+## Technologies
+This project is setup with webpack configuration and implemented with Javascript, HTML and CSS and it is adpated for mobile view. All functionalities from this web application is commumicate with backend using REST API.
 
 ## Deployment
 
