@@ -118,7 +118,6 @@ function getCardElement(data) {
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
 
-
   cardNameEl.textContent = data.name;
   cardImage.src = data.link;
   cardImage.alt = data.name;
@@ -168,14 +167,13 @@ function closeModal(modal) {
 // The form submission handler. Note that its name
 // starts with a verb and concisely describes what it does.
 //global variable to store the submit button
-let submitButton = null
 function handleProfileFormSubmit(evt) {
   // Prevent default browser behavior, see explanation below.
   evt.preventDefault();
 
   //rest API call to update user info
   //change text content to "saving...""
-  submitButton = evt.submitter;
+  const submitButton = evt.submitter;
   //helper function to change the text content of the button
   setButtonText(submitButton, true);
 
@@ -221,7 +219,7 @@ function handleDeleteCancel(evt) {
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   //change text content to "saving...""
-  submitButton = evt.submitter;
+  const submitButton = evt.submitter;
   //helper function to change the text content of the button
   setButtonText(submitButton, true, "Delete", "Deleting...");
   api
@@ -239,41 +237,42 @@ function handleDeleteSubmit(evt) {
     })
     .finally(() => {
       setButtonText(submitButton, false, "Delete", "Deleting...");
-  });
+    });
 }
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   //change text content to "saving...""
-  submitButton = evt.submitter;
+  const submitButton = evt.submitter;
   //helper function to change the text content of the button
   setButtonText(submitButton, true);
-  api.addCard({ name: cardCaptionInput.value, link: cardLinkInput.value })
-  .then((data) => {
-    const cardEl = getCardElement(data);
-    cardsList.prepend(cardEl);
-    evt.target.reset();
-    disableButton(cardModalSubmitBtn, settings);
-    closeModal(cardModal);
-  })
-  .catch(console.error)
-  .finally(() => {
-    //change text content back to "Save"
-    setButtonText(submitButton, false);
-  });
+  api
+    .addCard({ name: cardCaptionInput.value, link: cardLinkInput.value })
+    .then((data) => {
+      const cardEl = getCardElement(data);
+      cardsList.prepend(cardEl);
+      evt.target.reset();
+      disableButton(cardModalSubmitBtn, settings);
+      closeModal(cardModal);
+    })
+    .catch(console.error)
+    .finally(() => {
+      //change text content back to "Save"
+      setButtonText(submitButton, false);
+    });
 }
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
   //To do add api call to update the avatar
   //change text content to "saving...""
-  submitButton = evt.submitter;
+  const submitButton = evt.submitter;
   //helper function to change the text content of the button
   setButtonText(submitButton, true);
   api
     .editAvatarInfo({ avatar: avatarInput.value })
     .then((data) => {
-      avatarImage.src = data.avatar;
+      profileAvatarImage.src = data.avatar;
       closeModal(avatarModal);
     })
     .catch((err) => {
